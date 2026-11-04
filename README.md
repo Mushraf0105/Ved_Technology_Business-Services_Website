@@ -95,27 +95,9 @@ Business_&_Services_Website/
 
 ## 🛠️ Getting Started / How to Run
 
-Because this project uses strictly pure, standards-compliant web technologies, **no build steps, Node packages, or external installations are required**.
+No installation, build tools, or extra libraries required.
 
-### Option 1: Direct Browser Launch
-1. Navigate to the project root directory:
-   ```bash
-   cd e:\Veda-Technology\Business_&_Services_Website
-   ```
-2. Double-click `index.html` or open it with any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
-
-### Option 2: Local HTTP Server (Optional)
-If you prefer running a local development server:
-
-Using Python:
-```bash
-# Python 3
-python -m http.server 8000
-```
-Then visit `http://localhost:8000` in your browser.
-
-Using VS Code / IDE:
-- Right click `index.html` and select **"Open with Live Server"**.
+Simply double-click or open **`index.html`** in any web browser (Chrome, Edge, Firefox, or Safari).
 
 ---
 
