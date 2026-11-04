@@ -25,14 +25,9 @@ Built strictly with **pure HTML5, CSS3, and Vanilla JavaScript** without any ext
 ```text
 Business_&_Services_Website/
 │
-├── index.html            # Main semantic HTML5 single-page application
-├── css/
-│   └── style.css         # Responsive CSS3 styles with CSS variables & Grid/Flexbox
-├── js/
-│   └── main.js           # Vanilla JavaScript for menu, filters, accordions & form validation
-├── assets/
-│   ├── images/           # Image assets & previews
-│   └── icons/            # SVG icons
+├── index.html            # Main semantic HTML5 business website with SEO metadata
+├── style.css             # Pure CSS3 responsive styles (Variables, Flexbox, Grid, Media Queries)
+├── script.js             # Pure Vanilla JavaScript (Menu, Filtering, Accordion, Validation)
 └── README.md             # Project documentation & assessment guide
 ```
 
@@ -161,3 +156,4 @@ git push -u origin main
 
 Created for the **Veda Technology Business & Services Website Assessment**.  
 All rights reserved © 2026 Veda Technology.
+
