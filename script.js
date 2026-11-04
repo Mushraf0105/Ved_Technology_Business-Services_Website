@@ -1,19 +1,3 @@
-/**
- * ============================================================================
- * VEDA TECHNOLOGY - BUSINESS & SERVICES WEBSITE
- * Vanilla JavaScript (ES6+ / No external libraries or dependencies)
- * Features:
- *   1. Responsive Mobile Navigation (Accessible Hamburger Drawer)
- *   2. Sticky Header with Scroll Shadow
- *   3. Active Navigation Scroll Spy
- *   4. Technology Program Category Filtering
- *   5. Accessible FAQ Accordion
- *   6. Contact & Application Form Validation with Feedback Alert
- *   7. Quick Action Program/Internship Pre-Selection Handlers
- *   8. Floating Back-to-Top Button
- * ============================================================================
- */
-
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (navToggle && navMenu) {
     const toggleNavigation = (forceState) => {
-      const isExpanded = forceState !== undefined 
-        ? forceState 
+      const isExpanded = forceState !== undefined
+        ? forceState
         : navToggle.getAttribute('aria-expanded') !== 'true';
 
       navToggle.setAttribute('aria-expanded', isExpanded);
