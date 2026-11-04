@@ -76,6 +76,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -85,6 +88,9 @@ body {
   color: var(--color-text-body);
   background-color: var(--color-bg-body);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 img, svg {
@@ -1686,20 +1692,30 @@ textarea.form-control {
 /* Mobile Devices (<= 768px) */
 @media screen and (max-width: 768px) {
   :root {
-    --nav-height: 68px;
+    --nav-height: 64px;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .section-header {
+    margin-bottom: 38px;
   }
 
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
+    line-height: 1.25;
   }
 
-  .hero-title {
-    font-size: 2.2rem;
+  .section-subtitle {
+    font-size: 0.96rem;
   }
 
   /* Hamburger Navigation Drawer */
@@ -1712,64 +1728,297 @@ textarea.form-control {
   }
 
   .nav-menu {
+    display: none;
     position: fixed;
     top: var(--nav-height);
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 100vw;
     height: calc(100vh - var(--nav-height));
     background: #ffffff;
     flex-direction: column;
     align-items: stretch;
-    padding: 32px 24px;
+    padding: 24px 20px 40px;
     border-top: 1px solid var(--color-border);
-    transform: translateX(100%);
-    transition: transform var(--transition-normal);
     overflow-y: auto;
-    box-shadow: var(--shadow-xl);
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
   }
 
   .nav-menu.open {
-    transform: translateX(0);
+    display: flex;
+    animation: mobileNavFadeIn 0.22s ease-out forwards;
+  }
+
+  @keyframes mobileNavFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
   }
 
   .nav-link {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     width: 100%;
-    padding: 8px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
   }
 
   .nav-cta-mobile {
     display: block;
-    margin-top: 32px;
+    margin-top: 24px;
+    width: 100%;
   }
 
-  .about-cards-grid {
-    grid-template-columns: 1fr;
+  /* Hero Section */
+  .hero-section {
+    padding-top: 42px;
+    padding-bottom: 56px;
   }
 
-  .cards-grid,
-  .services-grid {
+  .hero-container {
     grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.2rem);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-top: 24px;
+  }
+
+  .stat-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  /* Hero Visual & Code Box */
+  .visual-card-wrapper {
+    padding: 8px 0;
+    width: 100%;
+    overflow: hidden;
   }
 
   .floating-tech-card {
     display: none;
   }
 
-  .footer-top {
+  .main-tech-illustration {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .terminal-header {
+    padding: 10px 14px;
+  }
+
+  .terminal-title {
+    font-size: 0.72rem;
+  }
+
+  .terminal-body {
+    padding: 16px 12px;
+    font-size: 0.74rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    word-break: break-word;
+  }
+
+  /* About Section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-heading {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+  }
+
+  .about-narrative p {
+    font-size: 0.96rem;
+  }
+
+  .about-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .about-cta-row .btn {
+    width: 100%;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pillar-card {
+    padding: 20px 18px;
+  }
+
+  /* Programs & Services */
+  .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 0.84rem;
+  }
+
+  .cards-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .program-card {
+    padding: 24px 18px;
+  }
+
+  .card-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .service-card {
+    padding: 24px 18px;
+  }
+
+  /* Internship Section */
+  .internship-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .internship-subheading {
+    font-size: 1.4rem;
+  }
+
+  .timeline-step {
+    gap: 14px;
+  }
+
+  .step-marker {
+    width: 32px;
+    height: 32px;
+    font-size: 0.92rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .internship-tracks-box {
+    padding: 22px 18px;
+  }
+
+  /* FAQs */
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 0 18px 18px;
+    font-size: 0.88rem;
+  }
+
+  /* Contact & Form */
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .contact-info-panel,
+  .contact-form-panel {
+    padding: 22px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .footer-bottom {
@@ -1777,38 +2026,35 @@ textarea.form-control {
     text-align: center;
     gap: 12px;
   }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .stat-divider {
-    display: none;
-  }
 }
 
 /* Extra Small Mobile (<= 480px) */
 @media screen and (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
+  .hero-badge {
+    font-size: 0.74rem;
+    padding: 4px 10px;
   }
 
   .filter-controls {
-    flex-direction: column;
+    gap: 6px;
   }
 
   .filter-btn {
-    width: 100%;
-    text-align: center;
+    padding: 7px 12px;
+    font-size: 0.8rem;
   }
 }
 
