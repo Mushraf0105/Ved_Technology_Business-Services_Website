@@ -4,6 +4,9 @@ A modern, responsive, multi-section business website developed for **Veda Techno
 
 Built strictly with **pure HTML5, CSS3, and Vanilla JavaScript** without any external bloated frameworks or third-party dependencies, adhering directly to the assessment specifications and lightweight web standards.
 
+- **Initial Project Release**: November 04, 2026
+- **Feature Upgrade Release**: November 05, 2026
+
 ---
 
 ## 🎯 Project Objectives & Assessment Scope
@@ -28,23 +31,42 @@ Business_&_Services_Website/
 ├── index.html            # Main semantic HTML5 business website with SEO metadata
 ├── style.css             # Pure CSS3 responsive styles (Variables, Flexbox, Grid, Media Queries)
 ├── script.js             # Pure Vanilla JavaScript (Menu, Filtering, Accordion, Validation)
-└── README.md             # Project documentation & assessment guide
+├── README.md             # Project documentation, changelog & execution guide
+└── Project_Report.pdf    # Comprehensive technical assessment & feature upgrade report
 ```
+
+---
+
+## 📅 Project Changelog & Timeline
+
+### Initial Release — November 04, 2026
+- Developed baseline single-page architecture with semantic HTML5, CSS3, and Vanilla JavaScript.
+- Implemented core sections: Navigation Bar, Hero Section with code graphic, About Us with 4 Pillars, Technology Programs with Category Filter Tabs, IT & Digital Services Grid, Structured 3-Phase Internship Roadmap, Accessible FAQ Accordion, Contact Form with Client-Side Regex Validation, and Footer.
+- Full mobile-first responsive layout across all device viewports.
+
+### Feature Upgrade — November 05, 2026
+- 🌓 **Dark / Light Mode Toggle**: Interactive Sun/Moon switch in header with deep slate tokens and persistent memory (`localStorage`).
+- 🚀 **Tech Stack Marquee Banner**: Infinite pure-CSS ticker featuring 12 industry technologies with hover-pause.
+- 📈 **Animated Milestone Counter**: Dynamic viewport-triggered counting animation for Hero statistics (`5,000+`, `120+`, `95%+`) using `IntersectionObserver` with cubic ease-out easing.
+- ⭐ **Student & Client Testimonials Section**: Added dedicated `#testimonials` section with 5-star rating badges and authentic outcome reviews.
+- 📄 **Project Report**: Updated and compiled into `Project_Report.pdf` with assessment metrics and both release dates.
 
 ---
 
 ## 🚀 Key Features & Deliverables
 
 ### 1. Navigation & Header
+- **Dark / Light Theme Toggle** *(Added Nov 05, 2026)*: Seamless switcher between bright modern palette and sleek dark slate mode with `localStorage` memory.
 - **Sticky Navigation**: Header transitions with backdrop blur and subtle elevation shadow as the user scrolls.
 - **Mobile Hamburger Drawer**: Accessible toggle with animated hamburger icon and keyboard support (`Escape` key close, body scroll lock).
 - **Scroll-Spy Navigation**: Automatically highlights the active section link in the navbar during scrolling.
 
-### 2. Homepage / Hero Section
+### 2. Homepage / Hero Section & Tech Stack Marquee
 - High-impact value proposition headline with technology badges.
 - Prominent call-to-action (CTA) buttons: *Explore Programs* and *Our IT Services*.
-- Verified key metric highlights (Students Mentored, Projects Delivered, Placement Rate).
+- **Animated Milestone Counter** *(Added Nov 05, 2026)*: Statistics (`5,000+`, `120+`, `95%+`) count up smoothly as they enter viewport using `IntersectionObserver`.
 - Interactive simulated code terminal graphic representing Veda Technology's engineering stack.
+- **Tech Stack Marquee Banner** *(Added Nov 05, 2026)*: Continuous infinite-scrolling ticker showcasing modern industry technologies (*React, Node.js, Python, AWS, Docker, Kubernetes, etc.*).
 
 ### 3. About Section
 - Corporate narrative highlighting Veda Technology's mission, values, and pedagogy.
@@ -70,12 +92,16 @@ Business_&_Services_Website/
 - Key intern benefits: Verified certificate, real GitHub commits, 1-on-1 mentorship, and placement assistance.
 - Detailed track descriptions for Web Development, Cloud/DevOps, and Data Engineering interns with a quick-apply trigger.
 
-### 7. Interactive FAQ Accordion
+### 7. Student & Client Testimonials Section *(Added Nov 05, 2026)*
+- 5-Star verified review cards from alumni interns and corporate clients.
+- Real quotes showcasing career outcomes, interview success, and enterprise delivery quality.
+
+### 8. Interactive FAQ Accordion
 - Accessible expand/collapse accordion implemented with `aria-expanded` and `hidden` attributes.
 - Auto-collapses other open questions when a new item is selected.
 - Answers real-world questions on eligibility, remote participation, project authenticity, and enterprise consulting.
 
-### 8. Contact & Inquiry Section
+### 9. Contact & Inquiry Section
 - Multi-channel contact information (Office address, email addresses, phone lines, operating hours).
 - Location campus summary card.
 - **Client-Side Form Validation**:
@@ -87,7 +113,7 @@ Business_&_Services_Website/
   - Inline error messaging and visual focus styling.
   - Asynchronous submission simulation with spinner and success feedback alert.
 
-### 9. Back-to-Top Floating Button
+### 10. Back-to-Top Floating Button
 - Appears smoothly after scrolling down 350px.
 - Smoothly animates the viewport back to the top when clicked.
 

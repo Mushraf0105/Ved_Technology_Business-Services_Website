@@ -324,5 +324,83 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --------------------------------------------------------------------------
+  // 9. DARK / LIGHT THEME TOGGLE
+  // --------------------------------------------------------------------------
+  const themeToggle = document.getElementById('theme-toggle');
+  const storedTheme = localStorage.getItem('veda-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('veda-theme', theme);
+    } catch (e) {
+      /* Safe storage fallback */
+    }
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+  };
+
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 10. ANIMATED MILESTONE COUNTERS
+  // --------------------------------------------------------------------------
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+  if (statNumbers.length) {
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1500;
+      const startTime = performance.now();
+
+      const step = (now) => {
+        const elapsed = Math.max(0, now - startTime);
+        const progress = Math.min(elapsed / duration, 1);
+        // Smooth cubic ease-out
+        const easeVal = 1 - Math.pow(1 - progress, 3);
+        const currentCount = Math.floor(easeVal * target);
+
+        el.textContent = currentCount.toLocaleString() + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target.toLocaleString() + suffix;
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      statNumbers.forEach(stat => statsObserver.observe(stat));
+    } else {
+      statNumbers.forEach(stat => animateCounter(stat));
+    }
+  }
+
 });
 

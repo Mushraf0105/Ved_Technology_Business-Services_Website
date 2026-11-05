@@ -45,6 +45,7 @@
           <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
           <li class="nav-item"><a href="#services" class="nav-link">IT Services</a></li>
           <li class="nav-item"><a href="#internships" class="nav-link">Internships</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
           <li class="nav-item"><a href="#faqs" class="nav-link">FAQs</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -55,6 +56,11 @@
 
       <!-- Header Action Controls -->
       <div class="header-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark and light theme" title="Toggle theme">
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
         <a href="#contact" class="btn btn-primary nav-cta-desktop">Get in Touch</a>
         <!-- Mobile Hamburger Toggle -->
         <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
@@ -92,20 +98,20 @@
             <a href="#services" class="btn btn-outline btn-lg">Our IT Services</a>
           </div>
           
-          <!-- Key Verification Highlights -->
+          <!-- Key Verification Highlights with Animated Milestone Counter -->
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-number">5,000+</span>
+              <span class="stat-number" data-target="5000" data-suffix="+">5,000+</span>
               <span class="stat-label">Students & Interns Mentored</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">120+</span>
+              <span class="stat-number" data-target="120" data-suffix="+">120+</span>
               <span class="stat-label">Digital Projects Delivered</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">95%+</span>
+              <span class="stat-number" data-target="95" data-suffix="%+">95%+</span>
               <span class="stat-label">Intern Placement Rate</span>
             </div>
           </div>
@@ -154,6 +160,46 @@
                 <small>DevOps & CI/CD Pipelines</small>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         TECH STACK MARQUEE BANNER
+         ============================================== -->
+    <section class="tech-marquee-section" aria-label="Core Technologies Marquee">
+      <div class="marquee-track-wrapper">
+        <div class="marquee-label">Enterprise & Curriculum Tech:</div>
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="marquee-item"><span class="tech-dot"></span>React.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Node.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Python</span>
+            <span class="marquee-item"><span class="tech-dot"></span>AWS Cloud</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Docker</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Kubernetes</span>
+            <span class="marquee-item"><span class="tech-dot"></span>PostgreSQL</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Flutter</span>
+            <span class="marquee-item"><span class="tech-dot"></span>TypeScript</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Next.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>MongoDB</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Git & GitHub</span>
+          </div>
+          <!-- Duplicated track for continuous seamless loop -->
+          <div class="marquee-group" aria-hidden="true">
+            <span class="marquee-item"><span class="tech-dot"></span>React.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Node.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Python</span>
+            <span class="marquee-item"><span class="tech-dot"></span>AWS Cloud</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Docker</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Kubernetes</span>
+            <span class="marquee-item"><span class="tech-dot"></span>PostgreSQL</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Flutter</span>
+            <span class="marquee-item"><span class="tech-dot"></span>TypeScript</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Next.js</span>
+            <span class="marquee-item"><span class="tech-dot"></span>MongoDB</span>
+            <span class="marquee-item"><span class="tech-dot"></span>Git & GitHub</span>
           </div>
         </div>
       </div>
@@ -699,7 +745,77 @@
     </section>
 
     <!-- ==============================================
-         6. FREQUENTLY ASKED QUESTIONS (FAQS)
+         6. TESTIMONIALS & REVIEWS SECTION
+         ============================================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SUCCESS STORIES</span>
+          <h2 class="section-title">Trusted by Students, Interns & Enterprise Clients</h2>
+          <p class="section-subtitle">
+            Read authentic feedback from cohort graduates who landed top engineering roles and businesses that scaled their digital products with Veda Technology.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "The hands-on internship at Veda Technology was a career catalyst. Deploying real containerized microservices and participating in daily agile stand-ups gave me the exact skills needed to clear my software engineer interviews."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AV</div>
+              <div class="author-details">
+                <strong class="author-name">Aditya Verma</strong>
+                <span class="author-role">Full-Stack Intern ➔ Software Engineer @ FinTech</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "Veda Technology rebuilt our legacy customer portal into a high-performance web platform on AWS. Their engineering team delivered on time with zero downtime and outstanding code quality."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar corporate">PN</div>
+              <div class="author-details">
+                <strong class="author-name">Priya Nair</strong>
+                <span class="author-role">Product Lead @ ScaleUp Solutions</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "Instead of generic tutorials, we worked on production Git repositories and automated CI/CD pipelines. The personal code reviews from senior engineers transformed the way I write code."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RS</div>
+              <div class="author-details">
+                <strong class="author-name">Rohan Sharma</strong>
+                <span class="author-role">Cloud & DevOps Cohort ➔ Cloud Associate</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         7. FREQUENTLY ASKED QUESTIONS (FAQS)
          ============================================== -->
     <section class="section" id="faqs">
       <div class="container">
@@ -969,6 +1085,7 @@
             <li><a href="#programs">Technology Programs</a></li>
             <li><a href="#services">IT & Digital Services</a></li>
             <li><a href="#internships">Internship Tracks</a></li>
+            <li><a href="#testimonials">Reviews & Stories</a></li>
             <li><a href="#faqs">Frequently Asked Questions</a></li>
             <li><a href="#contact">Contact & Admissions</a></li>
           </ul>
