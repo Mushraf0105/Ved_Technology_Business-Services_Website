@@ -118,6 +118,7 @@
           <div class="hero-actions">
             <a href="#programs" class="btn btn-primary btn-lg">Explore Programs</a>
             <a href="#services" class="btn btn-outline btn-lg">Our IT Services</a>
+            <a href="#contact" class="btn btn-outline btn-lg hero-book-cta" id="hero-book-btn">📅 Book 1-on-1 Call</a>
           </div>
 
           <!-- Key Verification Highlights with Animated Milestone Counter -->
@@ -441,6 +442,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Full Stack Web Engineering">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="full-stack">📄 Syllabus</button>
             </div>
           </article>
 
@@ -471,6 +473,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Cloud Computing & DevOps">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="cloud">📄 Syllabus</button>
             </div>
           </article>
 
@@ -501,6 +504,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Data Science & AI Applications">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="data">📄 Syllabus</button>
             </div>
           </article>
 
@@ -531,6 +535,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Cross-Platform App Development">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="mobile">📄 Syllabus</button>
             </div>
           </article>
 
@@ -561,6 +566,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Modern Frontend & UI Engineering">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="frontend">📄 Syllabus</button>
             </div>
           </article>
 
@@ -591,6 +597,7 @@
             <div class="card-footer">
               <a href="#contact" class="btn btn-outline btn-sm program-enroll-btn"
                 data-program="Cybersecurity & Network Defense">Enroll & Inquire</a>
+              <button type="button" class="btn btn-ghost btn-sm program-syllabus-btn" data-syllabus="cyber">📄 Syllabus</button>
             </div>
           </article>
 
@@ -1377,7 +1384,7 @@
               </div>
               <div class="contact-text">
                 <strong>Our Office Location</strong>
-                <span>Veda Technology Center, IT Park Road, Cyber City, Sector 62</span>
+                <span>Veda Technology Center, Lakhisarai, Bihar, India</span>
               </div>
             </div>
 
@@ -1421,70 +1428,218 @@
             </div>
           </div>
 
-          <!-- Interactive Contact Form -->
+          <!-- Interactive Contact & 1-on-1 Booking Panel -->
           <div class="contact-form-panel">
-            <h3 class="panel-heading">Send Us a Message</h3>
-            <p class="panel-subtext">Fill in the form below and specify your area of interest.</p>
-
-            <form id="contact-form" class="contact-form" novalidate>
-
-              <div class="form-group">
-                <label for="full-name" class="form-label">Full Name <span class="required">*</span></label>
-                <input type="text" id="full-name" name="name" class="form-control" placeholder="e.g. Rahul Sharma"
-                  required autocomplete="name">
-                <span class="form-error" id="name-error">Please enter your full name.</span>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-half">
-                  <label for="email-address" class="form-label">Email Address <span class="required">*</span></label>
-                  <input type="email" id="email-address" name="email" class="form-control"
-                    placeholder="name@example.com" required autocomplete="email">
-                  <span class="form-error" id="email-error">Please enter a valid email address.</span>
-                </div>
-
-                <div class="form-group col-half">
-                  <label for="phone-number" class="form-label">Phone Number <span class="required">*</span></label>
-                  <input type="tel" id="phone-number" name="phone" class="form-control" placeholder="+91 98765 43210"
-                    required autocomplete="tel">
-                  <span class="form-error" id="phone-error">Please enter a valid 10-digit phone number.</span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="inquiry-type" class="form-label">Inquiry Type / Interest <span
-                    class="required">*</span></label>
-                <select id="inquiry-type" name="inquiry_type" class="form-control" required>
-                  <option value="" disabled selected>-- Select an option --</option>
-                  <option value="internship">Student / Graduate Internship Program</option>
-                  <option value="training">Professional Technology Training</option>
-                  <option value="services">Enterprise IT & Software Services</option>
-                  <option value="corporate">Corporate Workforce Upskilling</option>
-                  <option value="other">General Business Inquiry</option>
-                </select>
-                <span class="form-error" id="type-error">Please select an inquiry type.</span>
-              </div>
-
-              <div class="form-group">
-                <label for="message-content" class="form-label">Your Message / Requirements <span
-                    class="required">*</span></label>
-                <textarea id="message-content" name="message" rows="4" class="form-control"
-                  placeholder="Tell us about your educational background, desired program, or project requirements..."
-                  required></textarea>
-                <span class="form-error" id="message-error">Please provide a message with at least 15 characters.</span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block btn-submit" id="submit-btn">
-                <span class="btn-text">Submit Inquiry</span>
-                <span class="spinner" aria-hidden="true"></span>
+            <!-- Mode Switcher Tabs -->
+            <div class="contact-tabs-nav" role="tablist" aria-label="Contact and Consultation Options">
+              <button type="button" class="contact-tab-btn active" id="tab-inquiry-btn" role="tab" aria-selected="true" aria-controls="inquiry-form-view">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Send Message</span>
               </button>
+              <button type="button" class="contact-tab-btn" id="tab-booking-btn" role="tab" aria-selected="false" aria-controls="booking-schedule-view">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Book 1-on-1 Call</span>
+                <span class="tab-highlight-tag">Free 30m</span>
+              </button>
+            </div>
 
-              <!-- Form Success Feedback Alert -->
-              <div class="alert alert-success" id="form-success" role="alert" hidden>
-                <strong>Thank you!</strong> Your message has been successfully received. A representative from Veda
-                Technology will contact you shortly.
+            <!-- View 1: Send Us a Message (General Inquiry) -->
+            <div class="contact-tab-view active" id="inquiry-form-view" role="tabpanel" aria-labelledby="tab-inquiry-btn">
+              <h3 class="panel-heading">Send Us a Message</h3>
+              <p class="panel-subtext">Fill in the form below and specify your area of interest.</p>
+
+              <form id="contact-form" class="contact-form" novalidate>
+
+                <div class="form-group">
+                  <label for="full-name" class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" id="full-name" name="name" class="form-control" placeholder="e.g. Rahul Sharma"
+                    required autocomplete="name">
+                  <span class="form-error" id="name-error">Please enter your full name.</span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-half">
+                    <label for="email-address" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email-address" name="email" class="form-control"
+                      placeholder="name@example.com" required autocomplete="email">
+                    <span class="form-error" id="email-error">Please enter a valid email address.</span>
+                  </div>
+
+                  <div class="form-group col-half">
+                    <label for="phone-number" class="form-label">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone-number" name="phone" class="form-control" placeholder="+91 98765 43210"
+                      required autocomplete="tel">
+                    <span class="form-error" id="phone-error">Please enter a valid 10-digit phone number.</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiry-type" class="form-label">Inquiry Type / Interest <span
+                      class="required">*</span></label>
+                  <select id="inquiry-type" name="inquiry_type" class="form-control" required>
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="internship">Student / Graduate Internship Program</option>
+                    <option value="training">Professional Technology Training</option>
+                    <option value="services">Enterprise IT & Software Services</option>
+                    <option value="corporate">Corporate Workforce Upskilling</option>
+                    <option value="other">General Business Inquiry</option>
+                  </select>
+                  <span class="form-error" id="type-error">Please select an inquiry type.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message-content" class="form-label">Your Message / Requirements <span
+                      class="required">*</span></label>
+                  <textarea id="message-content" name="message" rows="4" class="form-control"
+                    placeholder="Tell us about your educational background, desired program, or project requirements..."
+                    required></textarea>
+                  <span class="form-error" id="message-error">Please provide a message with at least 15 characters.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-submit" id="submit-btn">
+                  <span class="btn-text">Submit Inquiry</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+
+                <!-- Form Success Feedback Alert -->
+                <div class="alert alert-success" id="form-success" role="alert" hidden>
+                  <strong>Thank you!</strong> Your message has been successfully received. A representative from Veda
+                  Technology will contact you shortly.
+                </div>
+              </form>
+            </div>
+
+            <!-- View 2: Book a Free 1-on-1 Counseling Call -->
+            <div class="contact-tab-view" id="booking-schedule-view" role="tabpanel" aria-labelledby="tab-booking-btn" style="display: none;">
+              <h3 class="panel-heading">Book 1-on-1 Career Counseling</h3>
+              <p class="panel-subtext">Reserve a free 30-minute private video or call consultation with a Senior Mentor.</p>
+
+              <form id="booking-form" class="booking-form" novalidate>
+                <!-- 1. Consultation Focus -->
+                <div class="form-group">
+                  <label for="booking-topic" class="form-label">Consultation Focus <span class="required">*</span></label>
+                  <select id="booking-topic" name="booking_topic" class="form-control" required>
+                    <option value="" disabled selected>-- Choose Discussion Focus --</option>
+                    <option value="Career Switch into Tech (Beginner to Pro)">🚀 Career Switch into Tech (Beginner to Pro)</option>
+                    <option value="Full Stack Web Engineering Roadmap">💻 Full Stack Web Engineering Roadmap</option>
+                    <option value="Cloud Computing & DevOps Strategy">☁️ Cloud Computing & DevOps Strategy</option>
+                    <option value="Data Science & Applied AI Guidance">📊 Data Science & Applied AI Guidance</option>
+                    <option value="College to Corporate Internship Mentorship">🎓 College to Corporate Internship Mentorship</option>
+                    <option value="Enterprise IT Solutions & Live Demo">🏢 Enterprise IT Solutions & Live Demo</option>
+                  </select>
+                  <span class="form-error" id="booking-topic-error">Please select a consultation focus.</span>
+                </div>
+
+                <!-- 2. Select Date (Dynamic 6 days) -->
+                <div class="form-group">
+                  <div class="booking-field-header">
+                    <label class="form-label">Select Date (Upcoming 6 Days) <span class="required">*</span></label>
+                    <span class="booking-badge-live">Live Slots</span>
+                  </div>
+                  <div class="booking-dates-row" id="booking-dates-row" role="radiogroup" aria-label="Available Dates">
+                    <!-- Populated dynamically by script.js -->
+                  </div>
+                  <input type="hidden" id="selected-booking-date" name="selected_date" required>
+                  <span class="form-error" id="booking-date-error">Please select a preferred date.</span>
+                </div>
+
+                <!-- 3. Select Time Slot -->
+                <div class="form-group">
+                  <div class="booking-field-header">
+                    <label class="form-label">Select Time Slot <span class="required">*</span></label>
+                    <span class="booking-time-zone">Time Zone: IST (UTC+5:30)</span>
+                  </div>
+                  <div class="booking-slots-grid" id="booking-slots-grid" role="radiogroup" aria-label="Available Slots">
+                    <button type="button" class="slot-pill" data-slot="10:30 AM – 11:00 AM">10:30 AM</button>
+                    <button type="button" class="slot-pill" data-slot="12:00 PM – 12:30 PM">12:00 PM</button>
+                    <button type="button" class="slot-pill" data-slot="02:00 PM – 02:30 PM">02:00 PM</button>
+                    <button type="button" class="slot-pill" data-slot="03:30 PM – 04:00 PM">03:30 PM</button>
+                    <button type="button" class="slot-pill" data-slot="05:00 PM – 05:30 PM">05:00 PM</button>
+                    <button type="button" class="slot-pill" data-slot="06:30 PM – 07:00 PM">06:30 PM</button>
+                  </div>
+                  <input type="hidden" id="selected-booking-slot" name="selected_slot" required>
+                  <span class="form-error" id="booking-slot-error">Please choose an available time slot.</span>
+                </div>
+
+                <!-- 4. Attendee Details -->
+                <div class="form-row">
+                  <div class="form-group col-half">
+                    <label for="booking-name" class="form-label">Your Name <span class="required">*</span></label>
+                    <input type="text" id="booking-name" name="name" class="form-control" placeholder="e.g. Anjali Verma" required autocomplete="name">
+                    <span class="form-error" id="booking-name-error">Please enter your name.</span>
+                  </div>
+                  <div class="form-group col-half">
+                    <label for="booking-phone" class="form-label">Phone / WhatsApp <span class="required">*</span></label>
+                    <input type="tel" id="booking-phone" name="phone" class="form-control" placeholder="+91 98765 43210" required autocomplete="tel">
+                    <span class="form-error" id="booking-phone-error">Please enter a valid phone number.</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-half">
+                    <label for="booking-email" class="form-label">Email (for Calendar Invite) <span class="required">*</span></label>
+                    <input type="email" id="booking-email" name="email" class="form-control" placeholder="anjali@example.com" required autocomplete="email">
+                    <span class="form-error" id="booking-email-error">Please enter a valid email address.</span>
+                  </div>
+                  <div class="form-group col-half">
+                    <label for="booking-mode" class="form-label">Meeting Mode <span class="required">*</span></label>
+                    <select id="booking-mode" name="meeting_mode" class="form-control" required>
+                      <option value="Google Meet (Video Call)" selected>📹 Google Meet (Video Call)</option>
+                      <option value="Direct Phone Call">📞 Direct Phone Call</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-submit" id="booking-submit-btn">
+                  <span class="btn-text">Confirm 1-on-1 Free Session &rarr;</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </form>
+
+              <!-- Booking Confirmation Success Card -->
+              <div class="booking-success-card" id="booking-success-card" style="display: none;" role="alert">
+                <div class="booking-success-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <h4 class="booking-success-title">1-on-1 Session Confirmed!</h4>
+                <p class="booking-success-desc">A Google Meet calendar invite & confirmation have been generated.</p>
+                
+                <div class="booking-summary-box">
+                  <div class="booking-summary-line">
+                    <span class="summary-key">📅 Date & Time:</span>
+                    <strong class="summary-val" id="summary-datetime">-</strong>
+                  </div>
+                  <div class="booking-summary-line">
+                    <span class="summary-key">🎯 Focus:</span>
+                    <strong class="summary-val" id="summary-topic">-</strong>
+                  </div>
+                  <div class="booking-summary-line">
+                    <span class="summary-key">👨‍🏫 Lead Mentor:</span>
+                    <strong class="summary-val">Er. Amit Kumar (Senior Solutions Architect)</strong>
+                  </div>
+                  <div class="booking-summary-line">
+                    <span class="summary-key">🔗 Mode:</span>
+                    <strong class="summary-val" id="summary-mode">-</strong>
+                  </div>
+                </div>
+
+                <div class="booking-success-actions">
+                  <button type="button" class="btn btn-outline btn-sm" id="btn-book-another">Book Another Session</button>
+                </div>
               </div>
-            </form>
+
+            </div>
           </div>
 
         </div>
@@ -1618,6 +1773,134 @@
         </a>
         <button type="button" class="btn btn-outline btn-sm" id="modal-dismiss-btn">Close</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       INTERACTIVE SYLLABUS & CURRICULUM DRAWER (Pure Vanilla JavaScript)
+       ============================================== -->
+  <div class="syllabus-drawer-overlay" id="syllabus-drawer-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="syllabus-title">
+    <div class="syllabus-drawer" id="syllabus-drawer">
+      <div class="syllabus-drawer-header">
+        <div class="syllabus-header-info">
+          <div class="syllabus-meta-badges">
+            <span class="syllabus-track-badge" id="syllabus-track-badge">Track</span>
+            <span class="syllabus-duration-pill" id="syllabus-duration-pill">Duration</span>
+            <span class="syllabus-level-pill" id="syllabus-level-pill">Level</span>
+          </div>
+          <h3 class="syllabus-title" id="syllabus-title">Program Curriculum</h3>
+          <p class="syllabus-tagline" id="syllabus-tagline">Detailed weekly roadmap, capstones, and technical competencies.</p>
+        </div>
+        <button type="button" class="syllabus-close-btn" id="syllabus-close-btn" aria-label="Close syllabus drawer">&times;</button>
+      </div>
+
+      <div class="syllabus-drawer-body" id="syllabus-drawer-body">
+        <!-- Dynamically populated via script.js -->
+      </div>
+
+      <div class="syllabus-drawer-footer">
+        <div class="syllabus-cohort-info">
+          <span class="syllabus-cohort-label">Upcoming Live Cohort:</span>
+          <strong class="syllabus-cohort-val">Dec 01, 2026 • Limited to 25 Seats</strong>
+        </div>
+        <div class="syllabus-footer-actions">
+          <a href="#contact" class="btn btn-primary btn-sm syllabus-enroll-btn" id="syllabus-enroll-btn">Enroll & Claim Seat &rarr;</a>
+          <button type="button" class="btn btn-outline btn-sm" id="syllabus-dismiss-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       INTERACTIVE AI SUPPORT CHAT WIDGET (Pure Vanilla JavaScript)
+       ============================================== -->
+  <div class="ai-chat-widget" id="ai-chat-widget" role="region" aria-label="AI Support Chat Assistant">
+    
+    <!-- Floating Launcher Trigger Button -->
+    <button type="button" class="chat-launcher-btn" id="chat-launcher-btn" aria-expanded="false" aria-controls="chat-window" aria-label="Open AI live support chat" title="Chat with Veda AI Assistant">
+      <span class="chat-launcher-unread" id="chat-unread-dot" aria-label="New message available"></span>
+      <!-- Open Chat Icon (Chat Bubble SVG) -->
+      <svg class="icon-chat-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <!-- Close Icon (X SVG) -->
+      <svg class="icon-chat-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Chat Window Container -->
+    <div class="chat-window" id="chat-window" role="dialog" aria-modal="false" aria-labelledby="chat-header-name">
+      
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-header-avatar">
+          <div class="avatar-ring">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+              <circle cx="12" cy="5" r="2"></circle>
+              <path d="M12 7v4"></path>
+              <line x1="8" y1="16" x2="8" y2="16"></line>
+              <line x1="16" y1="16" x2="16" y2="16"></line>
+            </svg>
+          </div>
+          <span class="chat-status-pulse" aria-hidden="true"></span>
+        </div>
+        <div class="chat-header-info">
+          <strong class="chat-agent-name" id="chat-header-name">Veda Assistant</strong>
+          <span class="chat-agent-status">Online • Instant AI Support</span>
+        </div>
+        <button type="button" class="chat-minimize-btn" id="chat-minimize-btn" aria-label="Minimize support chat" title="Minimize chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+      </div>
+
+      <!-- Quick Suggestion Topic Chips -->
+      <div class="chat-suggestions-bar" id="chat-suggestions-bar" aria-label="Quick inquiry options">
+        <span class="suggestions-label">Quick topics:</span>
+        <div class="suggestions-chips-scroll">
+          <button type="button" class="chat-chip-btn" data-query="internship">🎓 Internship</button>
+          <button type="button" class="chat-chip-btn" data-query="courses">📚 Courses</button>
+          <button type="button" class="chat-chip-btn" data-query="services">💼 IT Services</button>
+          <button type="button" class="chat-chip-btn" data-query="fees">💰 Fees & Duration</button>
+          <button type="button" class="chat-chip-btn" data-query="apply">⚡ How to Apply</button>
+          <button type="button" class="chat-chip-btn" data-query="contact">📍 Location</button>
+        </div>
+      </div>
+
+      <!-- Messages Body -->
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+        <!-- Default Welcome Bot Message -->
+        <div class="message-row bot-row">
+          <div class="bot-msg-avatar">V</div>
+          <div class="message-bubble bot-bubble">
+            <p>Hello! Welcome to <strong>Veda Technology</strong>. I'm your virtual assistant.</p>
+            <p>Ask me about our technical training programs, student internships, enterprise IT services, or how to get started!</p>
+            <span class="msg-timestamp">Just now</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing Indicator (Hidden by default) -->
+      <div class="chat-typing-indicator" id="chat-typing-indicator" aria-hidden="true" style="display: none;">
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+      </div>
+
+      <!-- Chat Input Form -->
+      <form class="chat-input-area" id="chat-form" autocomplete="off">
+        <input type="text" id="chat-input-field" class="chat-input-field" placeholder="Ask a question about programs, internships..." aria-label="Type your message to Veda AI support" maxlength="250">
+        <button type="submit" class="chat-send-btn" id="chat-send-btn" aria-label="Send message" title="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+
     </div>
   </div>
 
